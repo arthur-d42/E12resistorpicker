@@ -14,7 +14,7 @@ amount = len(E12)#amount of resistors
 gain = []
 Rval = []
 
-print("For a fraction value of R1/R2 (useful in dividers) input 1\nFor a fraction value of -R2/R1 (inverting opamp) input 2\nFor a fraction value of 1+R2/R1 (noninverting opamp) input 3 ")
+print("For a fraction value of R1/R2 (useful in dividers) input 1\nFor a fraction value of -R2/R1 (inverting opamp) input 2\nFor a fraction value of 1+R1/R2 (noninverting opamp) input 3 ")
 
 fraction = int(input())
 
@@ -34,7 +34,7 @@ for i in range(amount):
         elif fraction == 2:
             gain.append(-R2/R1)
         elif fraction == 3:
-            gain.append(1+(R2/R1))
+            gain.append(1+(R1/R2))
 
 
         Rval.append([R1,R2])
